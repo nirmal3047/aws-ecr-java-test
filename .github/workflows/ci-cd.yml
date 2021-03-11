@@ -32,7 +32,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    need: build
+    needs: build
 
     steps:
     - name: Configure AWS Credentials
