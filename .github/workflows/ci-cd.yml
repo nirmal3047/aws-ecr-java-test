@@ -30,6 +30,11 @@ jobs:
     - name: Test
       run: ./gradlew test
 
+  deploy:
+    runs-on: ubuntu-latest
+    need: build
+
+    steps:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
